@@ -277,7 +277,7 @@
             style="width: 200px;"
             type="warning"
             icon="el-icon-download"
-            @click="gotoDOWNLOAD"
+            @click="toolsDown"
         >代理工具集合
         </el-button>
       </div>
@@ -414,7 +414,7 @@ const configUploadBackend = process.env.VUE_APP_CONFIG_UPLOAD_BACKEND + '/sub.ph
 const tgBotLink = process.env.VUE_APP_BOT_LINK
 const yglink = process.env.VUE_APP_YOUTUBE_LINK
 const bzlink = process.env.VUE_APP_BILIBILI_LINK
-const downloadUrl = process.env.VUE_APP_DOWNLOAD
+const downld = 'http://' + window.location.host + '/Subscription-conversion/download.html'
 export default {
   data() {
     return {
@@ -1011,8 +1011,8 @@ export default {
     gotoYouTuBe() {
       window.open(yglink);
     },
-    gotoDOWNLOAD() {
-      window.open(downloadUrl);
+    toolsDown() {
+      window.open(downld);
     },
 
     makeUrl() {

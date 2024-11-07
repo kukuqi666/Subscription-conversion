@@ -5,7 +5,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-  publicPath: '/Subscription-conversion/',
+    publicPath: '/Subscription-conversion/',
   css: {
     loaderOptions: {
       less: {
