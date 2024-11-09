@@ -23,18 +23,26 @@
 ## Docker
 
 ```shell
-docker run -d -p 58080:80 --restart always --name subweb kukuqi/Subscription-conversion:latest
+docker pull kukuqi/subscription-conversion:latest
 ```
+
+```shell
+docker run -d -p 8080:80 --restart always --name subweb kukuqi/subscription-conversion:latest
+```
+
+浏览器访问 <http://你的ip:8080/Subscription-conversion/>
 
 若需要对代码进行修改，你需要在本地构建镜像并运行。
 注：每次修改代码，你都需要重新执行 docker build 来执行打包操作。
 
 ```shell
-docker -v
-Docker version 23.0.4, build f480fb1
+git clone https://github.com/kukuqi666/Subscription-conversion.git
 
-docker build -t subweb-local:latest .
-docker run -d -p 58080:80 --restart always --name subweb subweb-local:latest
+cd Subscription-conversion
+
+docker build -t subscription-conversion:latest .
+
+docker run -d -p 8080:80 --restart always --name subweb subscription-conversion:latest
 ```
 
 ## Requirements
